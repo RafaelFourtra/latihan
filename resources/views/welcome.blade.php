@@ -24,7 +24,7 @@
                 <div id="app">
                         <router-view></router-view>
                         <router-link to="data-firebase" class="btn btn-primary">Data Firebase</router-link>
-                        <data-firebase :datamasuk="{{ collect($buku) }}"></data-firebase>
+                        <data-firebase :datamasuk="{{ $buku }}"></data-firebase>
                  </div>
                  
         <script src="js/app.js"></script>

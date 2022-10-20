@@ -25,6 +25,7 @@
         "webpack-cli": "^4.10.0"
     },
     "dependencies": {
+        "grpc": "^1.24.11",
         "vue-router": "^3.0.6"
     }
 }

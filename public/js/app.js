@@ -28064,13 +28064,13 @@ var render = function () {
         return _c("tr", [
           _c("td", [_vm._v(_vm._s(n.id))]),
           _vm._v(" "),
-          _c("td", [_vm._v(_vm._s(n))]),
+          _c("td", [_vm._v(_vm._s(n.nama_buku))]),
           _vm._v(" "),
-          _c("td", [_vm._v(_vm._s(n))]),
+          _c("td", [_vm._v(_vm._s(n.penerbit))]),
           _vm._v(" "),
-          _c("td", [_vm._v(_vm._s(n))]),
+          _c("td", [_vm._v(_vm._s(n.penulis))]),
           _vm._v(" "),
-          _c("td", [_vm._v(_vm._s(n))]),
+          _c("td", [_vm._v(_vm._s(n.tahun))]),
         ])
       }),
       0

@@ -12,9 +12,37 @@ class TestController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $buku = app('firebase.firestore')->database()->collection('buku')->documents();
-        return view('welcome',["buku" => $buku]);
+    {   
+        
+      
+        $buku = app('firebase.firestore')->database()->collection('buku')->documents(); 
+
+        //NGEGENERATE STRUKTUR DATA BARU
+
+        //INISIALISASI
+        $newData=[];
+
+        //NGELOOP DATA DARI VARIABLE BUKU
+        foreach($buku as $i =>$b){
+
+            //DAPETIN KEY/COLUMN NAME DARI FIRESTORENYA(SETIAP DATA BISA BEDA TERGANTUNG, STRUKTUR DOCSNYA)
+            $arrayStructur = array_keys($b->data());
+
+            //NGELOOP DATA DARI VIARIABLE YG UDAH DIDAPETIN DIATAS
+            $newData[$i]["id"] = $b->id();
+            foreach($arrayStructur as $ar){
+                //ASSIGN DATA KE VARIABLE BARU
+                
+                $newData[$i][$ar] = $b->data()[$ar];
+            }
+
+        
+      
+        }
+
+       // dd($newData);
+        
+        return view('welcome',["buku" => json_encode($newData)]);
     }
 
     /**

@@ -12,10 +12,10 @@
     <tbody>
         <tr v-for="n in datamasuk">
             <td>{{ n.id }}</td>
-            <td>{{ n }}</td>
-            <td>{{ n }}</td>
-            <td>{{ n }}</td>
-            <td>{{ n }}</td>
+            <td>{{ n.nama_buku}}</td>
+            <td>{{ n.penerbit}}</td>
+            <td>{{ n.penulis}}</td>
+            <td>{{ n.tahun}}</td>
         </tr>
     </tbody>
 </table>
